@@ -4,11 +4,11 @@
 #define N 4
 
 /*
-** ON considère pour chercheDico :
- * rien = pas un début de mot ni un mot complet
- * mot = un mot mais pas de début d'un autre mot
- * deb = début d'un mot mais pas de mot complet
- * mdeb = mot complet + début d'un mot
+** ON considÃ¨re pour chercheDico :
+ * rien = pas un dÃ©but de mot ni un mot complet
+ * mot = un mot mais pas de dÃ©but d'un autre mot
+ * deb = dÃ©but d'un mot mais pas de mot complet
+ * mdeb = mot complet + dÃ©but d'un mot
 */
 
 char Matrice[N][N];
@@ -19,7 +19,7 @@ void init_tab(char tab[N+1]) {
         tab[i]='\0';
 }
 
-void main() {
+void chercheMatrice() {
     int rien=0;
     int mot=1;
     int deb=2;
@@ -28,7 +28,7 @@ void main() {
     int i, j, k;
     for(i=0;i<N;i++) {
         for(j=0;j<N;j++) {
-            /* Recherche de mot à la verticale vers le bas */
+            /* Recherche de mot Ã  la verticale vers le bas */
             init_tab(T);
             T[0]=Matrice[i][j];
             for(k=1;chercheDico(T)!= rien && chercheDico != mot && i+k<N;k++) {
@@ -36,7 +36,7 @@ void main() {
                 if(i+k<N && (chercheDico(T)==mot || chercheDico(T)==mdeb))
                     ecrireFichier(T);
             }
-            /* Recherche de mot à la verticale vers le haut */
+            /* Recherche de mot Ã  la verticale vers le haut */
             init_tab(T);
             T[0]=Matrice[i][j];
             for(k=1;chercheDico(T)!= rien && chercheDico(T)!= mot && i-k>0;k++){
@@ -44,7 +44,7 @@ void main() {
                 if(i-k>0 && (chercheDico(T)==mot || chercheDico(T)==mdeb))
                     ecrireFichier(T);
             }
-            /* Recherche de mot à l'horizontale vers la droite */
+            /* Recherche de mot Ã  l'horizontale vers la droite */
             init_tab(T);
             T[0]=Matrice[i][j];
             for(k=1;chercheDico(T)!= rien && chercheDico != mot && j+k<N;k++) {
@@ -52,7 +52,7 @@ void main() {
                 if(j+k<N && (chercheDico(T)==mot || chercheDico(T)==mdeb))
                     ecrireFichier(T);
             }
-            /* Recherche de mot à l'horizontale vers la gauche */
+            /* Recherche de mot Ã  l'horizontale vers la gauche */
             init_tab(T);
             T[0]=Matrice[i][j];
             for(k=1;chercheDico(T)!= rien && chercheDico(T)!= mot && j-k>0;k++){
@@ -60,7 +60,7 @@ void main() {
                 if(j-k>0 && (chercheDico(T)==mot || chercheDico(T)==mdeb))
                     ecrireFichier(T);
             }
-            /* Recherche de mot à la diagonale vers le bas à droite */
+            /* Recherche de mot Ã  la diagonale vers le bas Ã  droite */
             init_tab(T);
             T[0]=Matrice[i][j];
             for(k=1;chercheDico(T)!= rien && chercheDico(T) != mot && i+k<N && j+k<N;k++) {
@@ -68,7 +68,7 @@ void main() {
                 if((i+k<N || j+k<N) && (chercheDico(T)==mot || chercheDico(T)==mdeb))
                     ecrireFichier(T);
             }
-            /* Recherche de mot à la diagonale vers le haut à gauche */
+            /* Recherche de mot Ã  la diagonale vers le haut Ã  gauche */
             init_tab(T);
             T[0]=Matrice[i][j];
             for(k=1;chercheDico(T)!= rien && chercheDico(T) != mot && i-k>0 && j-k>0;k++) {
@@ -76,7 +76,7 @@ void main() {
                 if((i-k>0 || j-k>0) && (chercheDico(T)==mot || chercheDico(T)==mdeb))
                     ecrireFichier(T);
             }
-            /* Recherche de mot à la diagonale vers le haut à droite */
+            /* Recherche de mot Ã  la diagonale vers le haut Ã  droite */
             init_tab(T);
             T[0]=Matrice[i][j];
             for(k=1;chercheDico(T)!= rien && chercheDico(T) != mot && i-k>0 && j+k<N;k++) {
@@ -84,7 +84,7 @@ void main() {
                 if((i-k>0 || j+k<N) && (chercheDico(T)==mot || chercheDico(T)==mdeb))
                     ecrireFichier(T);
             }
-            /* Recherche de mot à la diagonale vers le bas à gauche */
+            /* Recherche de mot Ã  la diagonale vers le bas Ã  gauche */
             init_tab(T);
             T[0]=Matrice[i][j];
             for(k=1;chercheDico(T)!= rien && chercheDico(T) != mot && i+k<N && j-k>0;k++) {
