@@ -31,7 +31,7 @@ void chercheMatrice() {
             /* Recherche de mot à la verticale vers le bas */
             init_tab(T);
             T[0]=Matrice[i][j];
-            for(k=1;chercheDico(T)!= rien && chercheDico != mot && i+k<N;k++) {
+            for(k=1;chercheDico(T)!= rien && chercheDico(T) != mot && i+k<N;k++) {
                 strcat(T, Matrice[i+k][j]);
                 if(i+k<N && (chercheDico(T)==mot || chercheDico(T)==mdeb))
                     ecrireFichier(T);
@@ -47,7 +47,7 @@ void chercheMatrice() {
             /* Recherche de mot à l'horizontale vers la droite */
             init_tab(T);
             T[0]=Matrice[i][j];
-            for(k=1;chercheDico(T)!= rien && chercheDico != mot && j+k<N;k++) {
+            for(k=1;chercheDico(T)!= rien && chercheDico(T) != mot && j+k<N;k++) {
                 strcat(T, Matrice[i][j+k]);
                 if(j+k<N && (chercheDico(T)==mot || chercheDico(T)==mdeb))
                     ecrireFichier(T);
