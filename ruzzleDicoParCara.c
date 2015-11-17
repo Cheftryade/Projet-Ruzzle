@@ -10,7 +10,7 @@
 void lecture_fin_ligne_fichier(FILE * pointeur_fichier)
 {
 	//Renvoie : place le pointeur à la fin de la ligne courante du fichier.
-	
+
 	// déclaration des variables
 	char caractere_courant_lu = 'a';
 
@@ -18,7 +18,7 @@ void lecture_fin_ligne_fichier(FILE * pointeur_fichier)
 	while ((caractere_courant_lu !='\n') && (!feof(pointeur_fichier))) {
 		// déplacement pointeur de fichier par lecture jusqu a saut de ligne ou fin de fichier
 		fscanf (pointeur_fichier, "%c", &caractere_courant_lu);
-		
+
 	}
 }
 
@@ -26,9 +26,9 @@ int dico(char mot[])
 {
 	//Renvoie : La fonction renvoie
 	//				0 si la fonction ne trouve pas de début de mot avec le mot passé en paramètre, dans le fichier texte dico
-	//				1 si la fonction trouve un début de mot avec le mot passé en paramètre dans le fichier texte dico 
+	//				1 si la fonction trouve un début de mot avec le mot passé en paramètre dans le fichier texte dico
 	//				2 si la fonction trouve le mot passé en paramètre dans le fichier texte dico mais pas d'autres mots possibles
-	//				3 si la fonction trouve le mot passé en paramètre dans le fichier texte dico et qui est aussi le début 	
+	//				3 si la fonction trouve le mot passé en paramètre dans le fichier texte dico et qui est aussi le début
 	//				d'autres mots possibles du dico.
 	//				5 si la fonction se trouve en cas d'erreur.
 	// La longueur maximale du mot passé en paramètres est de 4 caracteres.
@@ -42,7 +42,7 @@ int dico(char mot[])
 	int longueur_mot_max =3; 	/*longueur maximale des mots possibles - 1 */
 	int retour = 5;
 	FILE * pointeur_fichier;
-	
+
 	char mot_lu[50]="a";
 	char cara_ap_fin_mot ='a';
 	int taille_tab_mot = strlen(mot) - 1;
@@ -50,10 +50,10 @@ int dico(char mot[])
 	// corps de la procédure
 	/* ouverture du fichier : */
 
-	pointeur_fichier =fopen("./ressources/dico-ref-ascii-sans-accent.txt", "r");
+	pointeur_fichier =fopen("./ressource/dico-ref-ascii-sans-accent.txt", "r");
 
 	if (pointeur_fichier==NULL)	/* gestion d'erreur */
-	
+
 	{
 
 		printf("erreur d'ouverture de fichier : \n ");
@@ -85,9 +85,9 @@ int dico(char mot[])
 		}
 		else if (mot[i]==mot_lu[i]) {
 			if (taille_tab_mot == i) {
-				printf("\nligne 87");	
+				printf("\nligne 87");
 				// choix quand on se trouve sur le dernier caratere du mot a trouvé passé en parametre.
-			
+
 				// lecture du caratere venant apres dans le dico
 				fscanf(pointeur_fichier, "%c", &cara_ap_fin_mot);
 					if(cara_ap_fin_mot !='\n') {
@@ -112,7 +112,7 @@ int dico(char mot[])
 						// second cas de retour valeur 0
 						retour = 2;
 						}
-					
+
 			}
 			if (taille_tab_mot > i) {
 				// lecture quand i n'a pas atteint taille mot entier
@@ -125,17 +125,17 @@ int dico(char mot[])
 				// lettre lu inférieur en alphabet à lettre de mot donc on passe à la ligne suivante du dico
 				// appel fonction lecture_fin_ligne_fichier(FILE *fichier_pointeur)
 				lecture_fin_ligne_fichier(pointeur_fichier);
-				// effacement de mot_lu			
-							
+				// effacement de mot_lu
+
 				// mise compteur tableau a 0 en debut de mot.
-				i = 0;			
+				i = 0;
 		}
 		else {		// cas des caractères de fin de ligne non déterminés
-			printf("\nligne 117 : derniere caractere de mot comparé à fin de ligne"); 
+			printf("\nligne 117 : derniere caractere de mot comparé à fin de ligne");
 			// cas mot entier lu dans dico puisque passage à la ligne
 			// le compteur i peut etre varié pour cette position.
 			// choix de valeur de retour de la fonction
-				
+
 				if (i<longueur_mot_max) {
 					// cas mot identique avec possible mots supplémentaires avec plus de lettres
 					retour = 3;
@@ -145,26 +145,26 @@ int dico(char mot[])
 					// cas mot trouvé dans dico sans possibilites d'ajout de lettres
 					retour = 2;
 				}
-			} 
-			
+			}
+
 		} // fin lecture choix 1
-	
-			
+
+
 			if (mot[i]==mot_lu[i]) {
 				// on incrémente pour passée à la lettre suivante et voir si aussi identique
 				i++;
-				
+
 			} // autre lecture
 			else if (mot[i]<mot_lu[i]) {
 				// point de débogage : comparaison caracteres
 				// lettre lu inférieur en alphabet à lettre de mot donc on passe à la ligne suivante du dico
 				// appel fonction lecture_fin_ligne_fichier(FILE *fichier_pointeur)
 				lecture_fin_ligne_fichier(pointeur_fichier);
-				// effacement mot_lu			
+				// effacement mot_lu
 				// mise compteur tableau a 0 en debut de mot.
 					i = 0;
 			} // autre lecture
-			else  { 	// cas caracteres de fin de ligne non déterminés				
+			else  { 	// cas caracteres de fin de ligne non déterminés
 				//retour fin ligne si mot plus grand que i
 				// cas mot entier lu dans dico puisque passage à la ligne
 				// appel fonction lecture_fin_ligne_fichier(FILE *fichier_pointeur)
@@ -173,11 +173,11 @@ int dico(char mot[])
 				// mise compteur tab à 0,
 				i=0;
 			}
-		} // fin lecture choix 2 
-		
-			
+		} // fin lecture choix 2
+
+
 	}
-	
+
 	fclose(pointeur_fichier);	/*fermeture du fichier */
 	return retour;
 }

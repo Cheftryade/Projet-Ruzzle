@@ -24,10 +24,10 @@ int dico(char mot[])
 	// corps de la procédure
 	/* ouverture du fichier : */
 
-	pointeur_fichier =fopen("./ressources/dico-ref-ascii-sans-accent.txt", "r");
+	pointeur_fichier =fopen("./ressource/dico-ref-ascii-sans-accent.txt", "r");
 
 	if (pointeur_fichier==NULL)	/* gestion d'erreur */
-	
+
 	{
 
 		printf("erreur d'ouverture de fichier : \n ");
@@ -40,10 +40,10 @@ int dico(char mot[])
 
 	//
  	//
-	
+
 	while ((!feof(pointeur_fichier))&& (retour<2)) {			/*feof : atteinte de la fin du fichier*/
 		fscanf(pointeur_fichier, "%s", mot_lu);
-		
+
 		if (strcmp(mot , mot_lu) ==0) {
 			// trouve que mot est un mot entier du dico
 			if( taille_mot<longueur_mot_max) {
@@ -67,7 +67,7 @@ int dico(char mot[])
 			}
 		}
 	}
-	
+
 
 	fclose(pointeur_fichier);	/*fermeture du fichier */
 	return retour;	/* on retourne 1 si mot trouvé , 0 sinon */
