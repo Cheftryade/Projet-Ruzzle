@@ -24,7 +24,7 @@ char getLettreRandom(int nombreAleatoire)
         8351,5928,4725,2093,745};
     char lettres[] = "esaitnrulodcpmvqfbghjxyzwk";
     int i, total;
-    
+
     char retour = ' '; /* Valeur par défaut au cas où */
     for (i=0, total = 0; i < 36; i++)
      {
@@ -41,11 +41,11 @@ char getLettreRandom(int nombreAleatoire)
 
 
 
-void creaMatrice(){
+void creaMatrice(void){
     char mat[N][N];
     char Random;
     int i,j, nbAleatoire, nb;
-    char voyelle[6] = "AEIOUY";
+    //char voyelle[6] = "AEIOUY";
     int indice;
     srand (time (NULL)); // Obligatoire
     for(i=0;i<N;i++) {
@@ -55,5 +55,4 @@ void creaMatrice(){
         }
     }
     afficherMatrice(mat);
-    
 }

@@ -4,10 +4,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#define N 4
 
 // Déclaration des fonction
 
-int dico(char mot[])
+int chercheDico(char mot[N])
 {
 	//Renvoie : La fonction renvoie 1 si la fonction trouve le mot passé en paramètre dans le fichier texte dico dont le nom est
  	//en dur dans la fonction . son nom et chemin d'accès sont : "./ressources/dico-ref-ascii-sans-accent.txt"
