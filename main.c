@@ -1,10 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "fonctions.h"
+#include "./header/fonctions.h"
 #define N 4
 
 int main() {
     char Mat[N][N];
-    creaMatrice();
+    creaMatrice(Mat);
     chercheMatrice();
 }

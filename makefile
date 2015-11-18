@@ -12,8 +12,8 @@ ruzzleDicoParMot.o : ruzzleDicoParMot.c
 ruzzleEcrireFichier.o : ruzzleEcrireFichier.c
 	${CC} ${CFLAGS} -c ./fonctions/ruzzleEcrireFichier.c
 
-search.o : search.c
-	${CC} ${CFLAGS} -c ./fonctions/search.c
+search.o : search.c fonctions.h
+	${CC} ${CFLAGS} -c ./fonctions/search.c ./header/fonctions.h
 
 main.o : main.c fonctions.h
 	${CC} ${CFLAGS} main.c ./header/fonctions.h

@@ -3,7 +3,7 @@
 #include <time.h>
 #define N 4
 
-void afficherMatrice(char mat[N][N]){
+void afficherMatrice(char * mat[N][N]){
     int i, j;
     for(i=0; i<N; i++){
         for(j=0; j<N; j++){
@@ -42,8 +42,8 @@ char getLettreRandom(int nombreAleatoire)
 
 
 
-void creaMatrice(void){
-    char mat[N][N];
+void creaMatrice(char * Mat[N][N]){
+    // char mat[N][N];
     char Random;
     int i,j, nbAleatoire, nb;
     //char voyelle[6] = "AEIOUY";
@@ -52,8 +52,8 @@ void creaMatrice(void){
     for(i=0;i<N;i++) {
         for(j=0;j<N;j++) {
             nbAleatoire = rand_a_b(0,1533628);
-            mat[i][j] = getLettreRandom(nbAleatoire);
+            Mat[i][j] = getLettreRandom(nbAleatoire);
         }
     }
-    afficherMatrice(mat);
+    afficherMatrice(Mat);
 }

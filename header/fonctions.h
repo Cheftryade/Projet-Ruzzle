@@ -1,6 +1,6 @@
 #define N 4
 
-creaMatrice(void);
+creaMatrice(char * Mat[N][N]);
 chercheDico(char mot[N]);
-ecrireFichier(char mot[], int N);
-chercheMatrice(void);
+ecrireFichier(char mot[N], int N);
+chercheMatrice(char * Mat[N][N]);

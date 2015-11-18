@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include "./../header/fonctions.h"
 #define N 4
 
 /*
@@ -11,7 +12,7 @@
  * mdeb = mot complet + début d'un mot
 */
 
-char Matrice[N][N];
+// char Matrice[N][N];
 
 void init_tab(char tab[N+1]) {
     int i;
@@ -19,7 +20,7 @@ void init_tab(char tab[N+1]) {
         tab[i]='\0';
 }
 
-void chercheMatrice(void) {
+void chercheMatrice(char * Matrice[N][N]) {
     int rien=0;
     int mot=1;
     int deb=2;
