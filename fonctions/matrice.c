@@ -52,7 +52,7 @@ void creaMatrice(char * Mat[N][N]){
     for(i=0;i<N;i++) {
         for(j=0;j<N;j++) {
             nbAleatoire = rand_a_b(0,1533628);
-            Mat[i][j] = getLettreRandom(nbAleatoire);
+            *Mat[i][j] = getLettreRandom(nbAleatoire);
         }
     }
     afficherMatrice(Mat);

@@ -6,5 +6,5 @@
 int main() {
     char Mat[N][N];
     creaMatrice(Mat);
-    chercheMatrice();
+    chercheMatrice(Mat);
 }
