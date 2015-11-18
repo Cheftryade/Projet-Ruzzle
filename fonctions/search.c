@@ -24,7 +24,7 @@ void chercheMatrice(void) {
     int mot=1;
     int deb=2;
     int mdeb=3;
-    char T[N+1];
+    char T[N];
     int i, j, k;
     for(i=0;i<N;i++) {
         for(j=0;j<N;j++) {
@@ -32,7 +32,7 @@ void chercheMatrice(void) {
             init_tab(T);
             T[0]=Matrice[i][j];
             for(k=1;chercheDico(T)!= rien && chercheDico(T) != mot && i+k<N;k++) {
-                strcat(T, Matrice[i+k][j]);
+                T[k]=Matrice[i+k][j];
                 if(i+k<N && (chercheDico(T)==mot || chercheDico(T)==mdeb))
                     ecrireFichier(T, N);
             }
@@ -40,7 +40,7 @@ void chercheMatrice(void) {
             init_tab(T);
             T[0]=Matrice[i][j];
             for(k=1;chercheDico(T)!= rien && chercheDico(T)!= mot && i-k>0;k++){
-                strcat(T, Matrice[i-k][j]);
+                T[k]=Matrice[i-k][j];
                 if(i-k>0 && (chercheDico(T)==mot || chercheDico(T)==mdeb))
                     ecrireFichier(T, N);
             }
@@ -48,7 +48,7 @@ void chercheMatrice(void) {
             init_tab(T);
             T[0]=Matrice[i][j];
             for(k=1;chercheDico(T)!= rien && chercheDico(T) != mot && j+k<N;k++) {
-                strcat(T, Matrice[i][j+k]);
+                T[k]=Matrice[i][j+k];
                 if(j+k<N && (chercheDico(T)==mot || chercheDico(T)==mdeb))
                     ecrireFichier(T, N);
             }
@@ -56,7 +56,7 @@ void chercheMatrice(void) {
             init_tab(T);
             T[0]=Matrice[i][j];
             for(k=1;chercheDico(T)!= rien && chercheDico(T)!= mot && j-k>0;k++){
-                strcat(T, Matrice[i][j-k]);
+                T[k]=Matrice[i][j-k];
                 if(j-k>0 && (chercheDico(T)==mot || chercheDico(T)==mdeb))
                     ecrireFichier(T, N);
             }
@@ -64,7 +64,7 @@ void chercheMatrice(void) {
             init_tab(T);
             T[0]=Matrice[i][j];
             for(k=1;chercheDico(T)!= rien && chercheDico(T) != mot && i+k<N && j+k<N;k++) {
-                strcat(T, Matrice[i+k][j+k]);
+                T[k]=Matrice[i+k][j+k];
                 if((i+k<N || j+k<N) && (chercheDico(T)==mot || chercheDico(T)==mdeb))
                     ecrireFichier(T, N);
             }
@@ -72,7 +72,7 @@ void chercheMatrice(void) {
             init_tab(T);
             T[0]=Matrice[i][j];
             for(k=1;chercheDico(T)!= rien && chercheDico(T) != mot && i-k>0 && j-k>0;k++) {
-                strcat(T, Matrice[i-k][j-k]);
+                T[k]=Matrice[i-k][j-k];
                 if((i-k>0 || j-k>0) && (chercheDico(T)==mot || chercheDico(T)==mdeb))
                     ecrireFichier(T, N);
             }
@@ -80,7 +80,7 @@ void chercheMatrice(void) {
             init_tab(T);
             T[0]=Matrice[i][j];
             for(k=1;chercheDico(T)!= rien && chercheDico(T) != mot && i-k>0 && j+k<N;k++) {
-                strcat(T, Matrice[i-k][j+k]);
+                T[k]=Matrice[i-k][j+k];
                 if((i-k>0 || j+k<N) && (chercheDico(T)==mot || chercheDico(T)==mdeb))
                     ecrireFichier(T, N);
             }
@@ -88,7 +88,7 @@ void chercheMatrice(void) {
             init_tab(T);
             T[0]=Matrice[i][j];
             for(k=1;chercheDico(T)!= rien && chercheDico(T) != mot && i+k<N && j-k>0;k++) {
-                strcat(T, Matrice[i+k][j-k]);
+                T[k]=Matrice[i+k][j-k];
                 if((i+k<N || j-k>0) && (chercheDico(T)==mot || chercheDico(T)==mdeb))
                     ecrireFichier(T, N);
             }
