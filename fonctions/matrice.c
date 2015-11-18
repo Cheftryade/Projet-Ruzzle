@@ -17,6 +17,7 @@ void afficherMatrice(char mat[N][N]){
 int rand_a_b(int min,int max){
     return rand()%(max-min)+min;
 }
+
 char getLettreRandom(int nombreAleatoire)
 {
     int occurrences[] = {225947, 121895, 117110,115465,111103,108812,100500,96785,83668,
