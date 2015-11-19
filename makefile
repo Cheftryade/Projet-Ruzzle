@@ -3,8 +3,8 @@ OBJ = ./fonctions/matrice.o ./fonctions/ruzzleDicoParMot.o ./fonctions/ruzzleEcr
 CC = gcc
 CFLAGS = -g -Wall
 
-prog : ${OBJ}
-	${CC} ${CFLAGS} ${OBJ} -o prog
+${PROG} : ${OBJ}
+	${CC} ${CFLAGS} ${OBJ} -o ${PROG}
 
 ruzzleDicoParMot.o : ruzzleDicoParMot.c
 	${CC} ${CFLAGS} -c ./fonctions/ruzzleDicoParMot.c

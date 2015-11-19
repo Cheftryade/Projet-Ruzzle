@@ -7,7 +7,7 @@ void afficherMatrice(char * mat[N][N]){
     int i, j;
     for(i=0; i<N; i++){
         for(j=0; j<N; j++){
-            printf("%c", mat[i][j]);
+            printf("%c", *mat[i][j]);
         }
         printf("\n");
     }
