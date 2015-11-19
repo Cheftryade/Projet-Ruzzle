@@ -21,6 +21,7 @@ main.o : main.c fonctions.h
 #suppression des fichiers temporaires
 clean :
 	rm -i *.o
+	./fonctions/rm -i *.o
 
 mrproper : clean
 	rm -i prog
