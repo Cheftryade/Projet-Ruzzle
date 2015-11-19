@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "./../header/fonctions.h"
+#include "./../header/foncSearch.h"
 #define N 4
 
 /*
@@ -14,7 +14,7 @@
 
 // char Matrice[N][N];
 
-void init_tab(char tab[N+1]) {
+void init_tab(char tab[N]) {
     int i;
     for(i=0;i<N+1;i++)
         tab[i]='\0';
