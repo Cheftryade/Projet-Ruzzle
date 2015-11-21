@@ -36,7 +36,11 @@ cleanforce :
 	rm ./header/*.gch
 
 mrproper : clean
-	rm -i prog
+	rm -i ${PROG}
+	rm -i ${PROG}.exe
+	rm -i Resultat.txt
 	
 mrproperforce : cleanforce
-	rm prog
+	rm ${PROG}
+	rm ${PROG}.exe
+	rm Resultat.txt

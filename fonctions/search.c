@@ -21,6 +21,8 @@ void init_tab(char tab[M]) {
         tab[i]='\0';
 }
 
+
+/* Cette fonction conctène le mot avec un espace puis le nombre de points*/
 void concat(char T[M], int k) {
     char a[2];
     int nbpts;
