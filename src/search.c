@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "./../header/foncSearch.h"
+#include "./../include/foncSearch.h"
 #define N 4
 #define M 8
 

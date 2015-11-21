@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "./header/fonctions.h"
+#include "./../include/fonctions.h"
 #define N 4
 
 int main() {

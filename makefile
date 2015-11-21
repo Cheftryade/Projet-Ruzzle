@@ -1,46 +1,40 @@
 PROG = ./bin/ruzzleSolver
-OBJ = ./fonctions/matrice.o ./fonctions/ruzzleDicoParMot.o ./fonctions/ruzzleEcrireFichier.o ./fonctions/search.o ./fonctions/points.o main.o
+OBJ = ./src/matrice.o ./src/ruzzleDicoParMot.o ./src/ruzzleEcrireFichier.o ./src/search.o ./src/points.o ./src/main.o
 CC = gcc
 CFLAGS = -g -Wall
 
 ${PROG} : ${OBJ}
 	${CC} ${CFLAGS} ${OBJ} -o ${PROG}
 
-matrice.o : ./fonctions/matrice.c
-	${CC} ${CFLAGS} -c ./fonctions/matice.c
+matrice.o : ./src/matrice.c
+	${CC} ${CFLAGS} -c ./src/matice.c
 	
-ruzzleDicoParMot.o : ./fonctions/ruzzleDicoParMot.c
-	${CC} ${CFLAGS} -c ./fonctions/ruzzleDicoParMot.c
+ruzzleDicoParMot.o : ./src/ruzzleDicoParMot.c
+	${CC} ${CFLAGS} -c ./src/ruzzleDicoParMot.c
 
-ruzzleEcrireFichier.o : ./fonctions/ruzzleEcrireFichier.c
-	${CC} ${CFLAGS} -c ./fonctions/ruzzleEcrireFichier.c
+ruzzleEcrireFichier.o : ./src/ruzzleEcrireFichier.c
+	${CC} ${CFLAGS} -c ./src/ruzzleEcrireFichier.c
 
-points.o : ./fonctions/points.c
-	${CC} ${CFLAGS} -c ./fonctions/points.c
+points.o : ./src/points.c
+	${CC} ${CFLAGS} -c ./src/points.c
 	
-search.o : ./fonctions/search.c ./header/foncSearch.h
-	${CC} ${CFLAGS} -c ./fonctions/search.c ./header/foncSearch.h
+search.o : ./src/search.c ./include/foncSearch.h
+	${CC} ${CFLAGS} -c ./src/search.c ./include/foncSearch.h
 
-main.o : main.c ./header/fonctions.h
-	${CC} ${CFLAGS} -c main.c ./header/fonctions.h
+main.o : ./src/main.c ./include/fonctions.h
+	${CC} ${CFLAGS} -c ./src/main.c ./include/fonctions.h
 
 #suppression des fichiers temporaires
 clean :
-	rm -i *.o
-	rm -i ./fonctions/*.o
-	rm -i ./header/*.gch
+	rm -i ./src/*.o
 	
 cleanforce :
-	rm *.o
-	rm ./fonctions/*.o
-	rm ./header/*.gch
+	rm ./src/*.o
 
 mrproper : clean
-	rm -i Resultat.txt
+	rm -i ./lib/Resultat.txt
 	rm -i ./bin/ruzzleSolver
-	rm -i ./bin/ruzzleSolver.exe
 	
 mrproperforce : cleanforce
-	rm Resultat.txt
+	rm ./lib/Resultat.txt
 	rm ./bin/ruzzleSolver
-	rm ./bin/ruzzleSolver.exe
