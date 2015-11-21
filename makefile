@@ -36,11 +36,11 @@ cleanforce :
 	rm ./header/*.gch
 
 mrproper : clean
-	rm -i ${PROG}
-	rm -i ${PROG}.exe
 	rm -i Resultat.txt
+	rm -i ruzzle
+	rm -i ruzzle.exe
 	
 mrproperforce : cleanforce
-	rm ${PROG}
-	rm ${PROG}.exe
 	rm Resultat.txt
+	rm ruzzle
+	rm ruzzle.exe
