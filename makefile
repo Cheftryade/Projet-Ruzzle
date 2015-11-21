@@ -26,6 +26,14 @@ clean :
 	rm -i *.o
 	rm -i ./fonctions/*.o
 	rm -i ./header/*.gch
+	
+cleanforce :
+	rm *.o
+	rm ./fonctions/*.o
+	rm ./header/*.gch
 
 mrproper : clean
 	rm -i prog
+	
+mrproperforce : cleanforce
+	rm prog
