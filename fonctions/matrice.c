@@ -44,10 +44,10 @@ char getLettreRandom(int nombreAleatoire)
 
 void creaMatrice(char Mat[N][N]){
     // char mat[N][N];
-    char Random;
-    int i,j, nbAleatoire, nb;
+    //char Random;
+    int i,j, nbAleatoire;
     //char voyelle[6] = "AEIOUY";
-    int indice;
+    // int indice;
     srand (time (NULL)); // Obligatoire
     for(i=0;i<N;i++) {
         for(j=0;j<N;j++) {
