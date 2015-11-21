@@ -1,2 +1,2 @@
-chercheDico(char mot[]);
-ecrireFichier(char mot[], int);
+int chercheDico(char mot[]);
+void ecrireFichier(char mot[], int);

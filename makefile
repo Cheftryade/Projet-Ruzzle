@@ -4,24 +4,28 @@ CC = gcc
 CFLAGS = -g -Wall
 
 ${PROG} : ${OBJ}
-	${CC} ${CFLAGS} ${OBJ} -o ${PROG} -lm
+	${CC} ${CFLAGS} ${OBJ} -o ${PROG}
 
-ruzzleDicoParMot.o : ruzzleDicoParMot.c
+matrice.o : ./fonctions/matrice.c
+	${CC} ${CFLAGS} -c ./fonctions/matice.c
+	
+ruzzleDicoParMot.o : ./fonctions/ruzzleDicoParMot.c
 	${CC} ${CFLAGS} -c ./fonctions/ruzzleDicoParMot.c
 
-ruzzleEcrireFichier.o : ruzzleEcrireFichier.c
+ruzzleEcrireFichier.o : ./fonctions/ruzzleEcrireFichier.c
 	${CC} ${CFLAGS} -c ./fonctions/ruzzleEcrireFichier.c
 
-search.o : search.c foncSearch.h
+search.o : ./fonctions/search.c ./header/foncSearch.h
 	${CC} ${CFLAGS} -c ./fonctions/search.c ./header/foncSearch.h
 
-main.o : main.c fonctions.h
-	${CC} ${CFLAGS} main.c ./header/fonctions.h
+main.o : main.c ./header/fonctions.h
+	${CC} ${CFLAGS} -c main.c ./header/fonctions.h
 
 #suppression des fichiers temporaires
 clean :
 	rm -i *.o
-	./fonctions/rm -i *.o
+	rm -i ./fonctions/*.o
+	rm -i ./header/*.gch
 
 mrproper : clean
 	rm -i prog
