@@ -5,9 +5,9 @@
  * @param  mot_trouve Mot antérieurement trouvé
  * @return            Retourne le nombre de point du mot
  */
-int compte_points(char mot_trouve[]){
+int compte_points(char mot[]){
 	int i = 0;
-	int points : 0;
+	int points = 0;
 	for(i = 0 ; mot[i] != '\0' ; i++){
 		switch(mot[i]){
 			case 'a' : points += 1; break;
@@ -37,7 +37,7 @@ int compte_points(char mot_trouve[]){
 			case 'y' : points += 10; break;
 			case 'z' : points += 4; break;
 		}
-			
+
 	}
 	return points;
 }
