@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-int ecrireFichier(char mot[], int N)
+int ecrireFichier(char mot[])
 {
 	// Renvoie : la fonction écrit le mot passé en paramètre dans le fichier dont le nom est passé en parametre
 	// Déclaration des variables
