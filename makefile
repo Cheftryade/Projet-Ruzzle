@@ -1,4 +1,4 @@
-PROG = ruzzle
+PROG = ./bin/ruzzleSolver
 OBJ = ./fonctions/matrice.o ./fonctions/ruzzleDicoParMot.o ./fonctions/ruzzleEcrireFichier.o ./fonctions/search.o ./fonctions/points.o main.o
 CC = gcc
 CFLAGS = -g -Wall
@@ -37,10 +37,10 @@ cleanforce :
 
 mrproper : clean
 	rm -i Resultat.txt
-	rm -i ruzzle
-	rm -i ruzzle.exe
+	rm -i ./bin/ruzzleSolver
+	rm -i ./bin/ruzzleSolver.exe
 	
 mrproperforce : cleanforce
 	rm Resultat.txt
-	rm ruzzle
-	rm ruzzle.exe
+	rm ./bin/ruzzleSolver
+	rm ./bin/ruzzleSolver.exe

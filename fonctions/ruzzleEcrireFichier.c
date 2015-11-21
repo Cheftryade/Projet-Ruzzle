@@ -17,7 +17,7 @@ int ecrireFichier(char mot[])
 	// corps de la procédure
 	/* ouverture du fichier : */
 
-	pointeur_fichier =fopen("./Resultat.txt", "a+");
+	pointeur_fichier =fopen("./../lib/Resultat.txt", "a+");
 
 	if (pointeur_fichier ==NULL)	/* gestion d'erreur */
 

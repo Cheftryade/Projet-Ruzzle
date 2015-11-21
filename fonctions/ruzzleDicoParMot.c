@@ -25,7 +25,7 @@ int chercheDico(char mot[N])
 	// corps de la procédure
 	/* ouverture du fichier : */
 
-	pointeur_fichier =fopen("./ressource/dico-ref-ascii-sans-accent.txt", "r");
+	pointeur_fichier =fopen("./lib/dico-ref-ascii-sans-accent.txt", "r");
 
 	if (pointeur_fichier==NULL)	/* gestion d'erreur */
 
