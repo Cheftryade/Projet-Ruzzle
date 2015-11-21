@@ -1,5 +1,5 @@
 PROG = ruzzle
-OBJ = ./fonctions/matrice.o ./fonctions/ruzzleDicoParMot.o ./fonctions/ruzzleEcrireFichier.o ./fonctions/search.o ./fonctions/point.o main.o
+OBJ = ./fonctions/matrice.o ./fonctions/ruzzleDicoParMot.o ./fonctions/ruzzleEcrireFichier.o ./fonctions/search.o ./fonctions/points.o main.o
 CC = gcc
 CFLAGS = -g -Wall
 
@@ -15,8 +15,8 @@ ruzzleDicoParMot.o : ./fonctions/ruzzleDicoParMot.c
 ruzzleEcrireFichier.o : ./fonctions/ruzzleEcrireFichier.c
 	${CC} ${CFLAGS} -c ./fonctions/ruzzleEcrireFichier.c
 
-point.o : ./fonctions/point.c
-	${CC} ${CFLAGS} -c ./fonctions/point.c
+points.o : ./fonctions/points.c
+	${CC} ${CFLAGS} -c ./fonctions/points.c
 	
 search.o : ./fonctions/search.c ./header/foncSearch.h
 	${CC} ${CFLAGS} -c ./fonctions/search.c ./header/foncSearch.h
