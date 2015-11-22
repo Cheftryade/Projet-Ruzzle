@@ -1,0 +1,97 @@
+\hypertarget{search_8c}{}\section{Référence du fichier src/search.c}
+\label{search_8c}\index{src/search.\+c@{src/search.\+c}}
+
+
+Ecris dans un fichier les mots trouvés dans la grille présent dans le dico.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}./../include/fonc\+Search.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{search_8c_a0240ac851181b84ac374872dc5434ee4}{}\#define \hyperlink{search_8c_a0240ac851181b84ac374872dc5434ee4}{N}~4\label{search_8c_a0240ac851181b84ac374872dc5434ee4}
+
+\begin{DoxyCompactList}\small\item\em Taille de la matrice. \end{DoxyCompactList}\item 
+\hypertarget{search_8c_a52037c938e3c1b126c6277da5ca689d0}{}\#define {\bfseries M}~8\label{search_8c_a52037c938e3c1b126c6277da5ca689d0}
+
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{search_8c_a4fae4a6625928aba6524db4ad23d2b57}{init\+\_\+tab} (char tab\mbox{[}M\mbox{]})
+\begin{DoxyCompactList}\small\item\em Réinitialise le tableau pour la recherche de mot pour pouvoir réutiliser le même tableau pour tout les mots trouvés. \end{DoxyCompactList}\item 
+void \hyperlink{search_8c_af748aa540a336433d3d80ff66d0f5c1f}{concat} (char T\mbox{[}M\mbox{]}, int k)
+\begin{DoxyCompactList}\small\item\em Concatène le mot avec un espace puis le nombre de points. \end{DoxyCompactList}\item 
+void \hyperlink{search_8c_a153d41697aad096af23db3665b7e08c7}{cherche\+Matrice} (char Matrice\mbox{[}\hyperlink{fonctions_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]}\mbox{[}\hyperlink{fonctions_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]})
+\begin{DoxyCompactList}\small\item\em Recherche de mot verticalement et horizontalement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Ecris dans un fichier les mots trouvés dans la grille présent dans le dico. 
+
+\begin{DoxyAuthor}{Auteur}
+Biardeau Tristan Bussereau Keryann Tabot Alexandre 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+v1.\+00 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14/11/2015 
+\end{DoxyDate}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{search_8c_a153d41697aad096af23db3665b7e08c7}{}\index{search.\+c@{search.\+c}!cherche\+Matrice@{cherche\+Matrice}}
+\index{cherche\+Matrice@{cherche\+Matrice}!search.\+c@{search.\+c}}
+\subsubsection[{cherche\+Matrice(char Matrice[N][N])}]{\setlength{\rightskip}{0pt plus 5cm}void cherche\+Matrice (
+\begin{DoxyParamCaption}
+\item[{char}]{Matrice\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{search_8c_a153d41697aad096af23db3665b7e08c7}
+
+
+Recherche de mot verticalement et horizontalement. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Matrice} & Matrice de caractère générée \\
+\hline
+\end{DoxyParams}
+\hypertarget{search_8c_af748aa540a336433d3d80ff66d0f5c1f}{}\index{search.\+c@{search.\+c}!concat@{concat}}
+\index{concat@{concat}!search.\+c@{search.\+c}}
+\subsubsection[{concat(char T[M], int k)}]{\setlength{\rightskip}{0pt plus 5cm}void concat (
+\begin{DoxyParamCaption}
+\item[{char}]{T\mbox{[}\+M\mbox{]}, }
+\item[{int}]{k}
+\end{DoxyParamCaption}
+)}\label{search_8c_af748aa540a336433d3d80ff66d0f5c1f}
+
+
+Concatène le mot avec un espace puis le nombre de points. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em T} & Mot \\
+\hline
+{\em k} & \mbox{[}description\mbox{]} \\
+\hline
+\end{DoxyParams}
+\hypertarget{search_8c_a4fae4a6625928aba6524db4ad23d2b57}{}\index{search.\+c@{search.\+c}!init\+\_\+tab@{init\+\_\+tab}}
+\index{init\+\_\+tab@{init\+\_\+tab}!search.\+c@{search.\+c}}
+\subsubsection[{init\+\_\+tab(char tab[M])}]{\setlength{\rightskip}{0pt plus 5cm}void init\+\_\+tab (
+\begin{DoxyParamCaption}
+\item[{char}]{tab\mbox{[}\+M\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{search_8c_a4fae4a6625928aba6524db4ad23d2b57}
+
+
+Réinitialise le tableau pour la recherche de mot pour pouvoir réutiliser le même tableau pour tout les mots trouvés. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em tab} & Mot trouvé \\
+\hline
+\end{DoxyParams}

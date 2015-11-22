@@ -1,0 +1,117 @@
+\hypertarget{matrice_8c}{}\section{Référence du fichier src/matrice.c}
+\label{matrice_8c}\index{src/matrice.\+c@{src/matrice.\+c}}
+
+
+Créer et affiche la matrice de caractères.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{matrice_8c_a0240ac851181b84ac374872dc5434ee4}{}\#define \hyperlink{matrice_8c_a0240ac851181b84ac374872dc5434ee4}{N}~4\label{matrice_8c_a0240ac851181b84ac374872dc5434ee4}
+
+\begin{DoxyCompactList}\small\item\em Taille de la matrice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{matrice_8c_a7c1bc1be7683f512adc3d43ac1108267}{afficher\+Matrice} (char Mat\mbox{[}\hyperlink{fonctions_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]}\mbox{[}\hyperlink{fonctions_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]})
+\begin{DoxyCompactList}\small\item\em Permet l\textquotesingle{}affichage de la matrice dans le terminal. \end{DoxyCompactList}\item 
+int \hyperlink{matrice_8c_a82e0764fd657350bbcdf89bdd9b02c34}{rand\+\_\+a\+\_\+b} (int min, int max)
+\begin{DoxyCompactList}\small\item\em Renvoie un nombre aléatoire borné entre les deux paramètres de la fonction. \end{DoxyCompactList}\item 
+char \hyperlink{matrice_8c_a489cdf0fd7fada4324e81d6456d878b3}{get\+Lettre\+Random} (int nombre\+Aleatoire)
+\begin{DoxyCompactList}\small\item\em Fonction permettant d\textquotesingle{}obtenir une lettre aléatoire, selon sa fréquence d\textquotesingle{}apparition dans la langue française. \end{DoxyCompactList}\item 
+void \hyperlink{matrice_8c_ab44f52725f6690522857528803ec9146}{crea\+Matrice} (char Mat\mbox{[}\hyperlink{fonctions_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]}\mbox{[}\hyperlink{fonctions_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]})
+\begin{DoxyCompactList}\small\item\em Permet de remplir la matrice de caractères générés aléatoirement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Créer et affiche la matrice de caractères. 
+
+\begin{DoxyAuthor}{Auteur}
+Biardeau Tristan Bussereau Keryann Tabot Alexandre 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+v1.\+00 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14/11/2015 
+\end{DoxyDate}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{matrice_8c_a7c1bc1be7683f512adc3d43ac1108267}{}\index{matrice.\+c@{matrice.\+c}!afficher\+Matrice@{afficher\+Matrice}}
+\index{afficher\+Matrice@{afficher\+Matrice}!matrice.\+c@{matrice.\+c}}
+\subsubsection[{afficher\+Matrice(char Mat[N][N])}]{\setlength{\rightskip}{0pt plus 5cm}void afficher\+Matrice (
+\begin{DoxyParamCaption}
+\item[{char}]{Mat\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{matrice_8c_a7c1bc1be7683f512adc3d43ac1108267}
+
+
+Permet l\textquotesingle{}affichage de la matrice dans le terminal. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Mat} & Matrice générée \\
+\hline
+\end{DoxyParams}
+\hypertarget{matrice_8c_ab44f52725f6690522857528803ec9146}{}\index{matrice.\+c@{matrice.\+c}!crea\+Matrice@{crea\+Matrice}}
+\index{crea\+Matrice@{crea\+Matrice}!matrice.\+c@{matrice.\+c}}
+\subsubsection[{crea\+Matrice(char Mat[N][N])}]{\setlength{\rightskip}{0pt plus 5cm}void crea\+Matrice (
+\begin{DoxyParamCaption}
+\item[{char}]{Mat\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{matrice_8c_ab44f52725f6690522857528803ec9146}
+
+
+Permet de remplir la matrice de caractères générés aléatoirement. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Mat} & Matrice de caractères comprenant les caractères générés ci-\/dessus \\
+\hline
+\end{DoxyParams}
+\hypertarget{matrice_8c_a489cdf0fd7fada4324e81d6456d878b3}{}\index{matrice.\+c@{matrice.\+c}!get\+Lettre\+Random@{get\+Lettre\+Random}}
+\index{get\+Lettre\+Random@{get\+Lettre\+Random}!matrice.\+c@{matrice.\+c}}
+\subsubsection[{get\+Lettre\+Random(int nombre\+Aleatoire)}]{\setlength{\rightskip}{0pt plus 5cm}char get\+Lettre\+Random (
+\begin{DoxyParamCaption}
+\item[{int}]{nombre\+Aleatoire}
+\end{DoxyParamCaption}
+)}\label{matrice_8c_a489cdf0fd7fada4324e81d6456d878b3}
+
+
+Fonction permettant d\textquotesingle{}obtenir une lettre aléatoire, selon sa fréquence d\textquotesingle{}apparition dans la langue française. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nombre\+Aleatoire} & Nombre préalablement généré grace à la fonction rand\+\_\+a\+\_\+b \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Retourne une lettre tiré aléatoirement 
+\end{DoxyReturn}
+\hypertarget{matrice_8c_a82e0764fd657350bbcdf89bdd9b02c34}{}\index{matrice.\+c@{matrice.\+c}!rand\+\_\+a\+\_\+b@{rand\+\_\+a\+\_\+b}}
+\index{rand\+\_\+a\+\_\+b@{rand\+\_\+a\+\_\+b}!matrice.\+c@{matrice.\+c}}
+\subsubsection[{rand\+\_\+a\+\_\+b(int min, int max)}]{\setlength{\rightskip}{0pt plus 5cm}int rand\+\_\+a\+\_\+b (
+\begin{DoxyParamCaption}
+\item[{int}]{min, }
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)}\label{matrice_8c_a82e0764fd657350bbcdf89bdd9b02c34}
+
+
+Renvoie un nombre aléatoire borné entre les deux paramètres de la fonction. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em min} & Borne minimale \\
+\hline
+{\em max} & Borne maximale \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Retourne un nombre aléatoire compris entre min et max 
+\end{DoxyReturn}

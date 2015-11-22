@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Projet_Ruzzle: Référence du fichier src/matrice.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projet_Ruzzle
+   </div>
+   <div id="projectbrief">Résolution d&#39;une grille de ruzzle</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier matrice.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Créer et affiche la matrice de caractères.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a0240ac851181b84ac374872dc5434ee4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0240ac851181b84ac374872dc5434ee4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrice_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>&#160;&#160;&#160;4</td></tr>
+<tr class="memdesc:a0240ac851181b84ac374872dc5434ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Taille de la matrice. <br /></td></tr>
+<tr class="separator:a0240ac851181b84ac374872dc5434ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a7c1bc1be7683f512adc3d43ac1108267"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrice_8c.html#a7c1bc1be7683f512adc3d43ac1108267">afficherMatrice</a> (char Mat[<a class="el" href="fonctions_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="el" href="fonctions_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>])</td></tr>
+<tr class="memdesc:a7c1bc1be7683f512adc3d43ac1108267"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet l'affichage de la matrice dans le terminal.  <a href="#a7c1bc1be7683f512adc3d43ac1108267">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7c1bc1be7683f512adc3d43ac1108267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82e0764fd657350bbcdf89bdd9b02c34"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrice_8c.html#a82e0764fd657350bbcdf89bdd9b02c34">rand_a_b</a> (int min, int max)</td></tr>
+<tr class="memdesc:a82e0764fd657350bbcdf89bdd9b02c34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie un nombre aléatoire borné entre les deux paramètres de la fonction.  <a href="#a82e0764fd657350bbcdf89bdd9b02c34">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a82e0764fd657350bbcdf89bdd9b02c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a489cdf0fd7fada4324e81d6456d878b3"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrice_8c.html#a489cdf0fd7fada4324e81d6456d878b3">getLettreRandom</a> (int nombreAleatoire)</td></tr>
+<tr class="memdesc:a489cdf0fd7fada4324e81d6456d878b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction permettant d'obtenir une lettre aléatoire, selon sa fréquence d'apparition dans la langue française.  <a href="#a489cdf0fd7fada4324e81d6456d878b3">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a489cdf0fd7fada4324e81d6456d878b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab44f52725f6690522857528803ec9146"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrice_8c.html#ab44f52725f6690522857528803ec9146">creaMatrice</a> (char Mat[<a class="el" href="fonctions_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="el" href="fonctions_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>])</td></tr>
+<tr class="memdesc:ab44f52725f6690522857528803ec9146"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de remplir la matrice de caractères générés aléatoirement.  <a href="#ab44f52725f6690522857528803ec9146">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab44f52725f6690522857528803ec9146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Créer et affiche la matrice de caractères. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Biardeau Tristan Bussereau Keryann Tabot Alexandre </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>v1.00 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>14/11/2015 </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a class="anchor" id="a7c1bc1be7683f512adc3d43ac1108267"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void afficherMatrice </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>Mat</em>[N][N]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Permet l'affichage de la matrice dans le terminal. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Mat</td><td>Matrice générée </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab44f52725f6690522857528803ec9146"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void creaMatrice </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>Mat</em>[N][N]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Permet de remplir la matrice de caractères générés aléatoirement. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Mat</td><td>Matrice de caractères comprenant les caractères générés ci-dessus </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a489cdf0fd7fada4324e81d6456d878b3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char getLettreRandom </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nombreAleatoire</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction permettant d'obtenir une lettre aléatoire, selon sa fréquence d'apparition dans la langue française. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nombreAleatoire</td><td>Nombre préalablement généré grace à la fonction rand_a_b </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Retourne une lettre tiré aléatoirement </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a82e0764fd657350bbcdf89bdd9b02c34"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rand_a_b </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renvoie un nombre aléatoire borné entre les deux paramètres de la fonction. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">min</td><td>Borne minimale </td></tr>
+    <tr><td class="paramname">max</td><td>Borne maximale </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Retourne un nombre aléatoire compris entre min et max </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>
