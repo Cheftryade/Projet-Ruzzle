@@ -1,13 +1,25 @@
-// Alexandre TABOT L2 SPI Université du Mans 2015-2016
-// Date : 27 oct 2015
+/**
+ @file ruzzleDicoMarMot.c
+ @brief Cherche un mot trouvé dans le dico
+ @author Biardeau Tristan Bussereau Keryann Tabot Alexandre
+ @version v1.00
+ @date 14/11/2015
+ */
+
+
 // inclusion des bibliothèques
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#define N 4
+#define N 4 /**< Taille de la matrice */
 
 // Déclaration des fonction
 
+/**
+ * Cherche dans le dico un mot
+ * @param  mot Mot préalablement trouvé dans la grille
+ * @return     1 si mot trouvé, 0 sinon
+ */
 int chercheDico(char mot[N])
 {
 	//Renvoie : La fonction renvoie 1 si la fonction trouve le mot passé en paramètre dans le fichier texte dico dont le nom est

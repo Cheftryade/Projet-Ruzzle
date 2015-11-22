@@ -1,9 +1,16 @@
-// Biardeau Tristan
+/**
+ @file points.c
+ @brief Compte les points d'un mot
+ @author Biardeau Tristan Bussereau Keryann Tabot Alexandre
+ @version v1.00
+ @date 14/11/2015
+ */
+
 
 /**
  * Permet de donner un nombre de points pour un mot passé en paramètre
- * @param  mot_trouve Mot antérieurement trouvé
- * @return            Retourne le nombre de point du mot
+ * @param  mot Mot antérieurement trouvé
+ * @return Retourne le nombre de points du mot
  */
 int compte_points(char mot[]){
 	int i = 0;

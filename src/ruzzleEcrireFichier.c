@@ -1,15 +1,24 @@
-// Alexandre TABOT L2 SPI Université du Mans 2015-2016
-// Date :
-// Compilation : exemple :alexandre@alexandre-tabot7:~/Documents/pbc$ gcc affiche var ex001.c -o afficheEx001 -wall
-// Execution :
-//
+/**
+ @file ruzzleEcrireFichier.c
+ @brief Ecris dans un fichier les mots trouvés dans la grille présent dans le dico
+ @author Biardeau Tristan Bussereau Keryann Tabot Alexandre
+ @version v1.00
+ @date 14/11/2015
+ */ 
+
 // Inclusion des bibliothèques
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+ /**
+  * Ecris dans le fichier Resultat.txt le mot passé en paramètre
+  * @param  mot Mot trouvé dans la grille et présent dans le dico
+  * @return     Retourne le nombre d'éléments écrit
+  */
 int ecrireFichier(char mot[])
 {
-	// Renvoie : la fonction écrit le mot passé en paramètre dans le fichier dont le nom est passé en parametre
+	// Renvoie : la fonction écrit le mot passé en paramètre dans le fichier Resultat.txt
 	// Déclaration des variables
 	int i = 0;
 	FILE * pointeur_fichier;
