@@ -1,1 +1,2 @@
 Pour compiler notre code il suffit d'aller dans le dossier principal et de lancer le makefile en écrivant make dans le terminal, un exécutable se créera dans le dossier bin et les résultats du lancement de l'éxécutable seront dans le fichier Resultats.txt dans le dossier lib. Il semble que toutes les fontions fonctionnent comme il faut mais le temps d'exécution de ruzzleSolever peut prendre une 30ène de secondes.
+Lien github : https://github.com/Cheftryade/Projet-Ruzzle
